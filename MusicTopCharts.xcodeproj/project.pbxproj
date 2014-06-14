@@ -465,6 +465,7 @@
 				66E03E28194B9D6D007EEB9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66E03E29194B9D6D007EEB9F /* Build configuration list for PBXNativeTarget "MusicTopChartsTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +474,7 @@
 				66E03E2B194B9D6D007EEB9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

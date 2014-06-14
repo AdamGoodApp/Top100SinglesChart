@@ -37,6 +37,31 @@
         [self.blogPost.jsonMutable addObject:bp];
     }
     
+    // Initialize Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    
+    // Configure Refresh Control
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    
+    // Configure View Controller
+    [self setRefreshControl:refreshControl];
+    
+    UIImage *image = [UIImage imageNamed:@"Wall-8.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    self.tableView.backgroundView = imageView;
+    self.tableView.backgroundView.layer.zPosition -= 1;
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(0.0f, -15.0f, 0.0f, 0.0f);
+    
+}
+
+- (void)refresh:(id)sender
+{
+    NSLog(@"Refreshing");
+    [self.tableView reloadData];
+    
+    // End Refreshing
+    [(UIRefreshControl *)sender endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,6 +96,7 @@
     cell.imageView.image = image;
     cell.textLabel.text = post.songTitle;
     cell.detailTextLabel.text = post.artist;
+    cell.backgroundColor = [UIColor colorWithRed:1.000 green:0.415 blue:0.427 alpha:0.000];
     
     return cell;
 }
