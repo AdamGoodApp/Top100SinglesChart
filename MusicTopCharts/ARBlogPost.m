@@ -4,7 +4,7 @@
 //
 //  Created by Adam Rais on 13/06/2014.
 //  Copyright (c) 2014 Adam Rais. All rights reserved.
-//
+// Implement Json pod.
 
 #import "ARBlogPost.h"
 
